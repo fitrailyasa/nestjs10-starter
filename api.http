@@ -1,0 +1,55 @@
+### API
+@hostname = http://127.0.0.1:3000/api
+@token = Bearer 
+
+################# ✅ Auth
+### ✅ Login
+POST {{hostname}}/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "admin@admin.com",
+    "password": "password"
+}
+
+### ✅ Get User
+GET {{hostname}}/user
+# Authorization: {{token}}
+
+### ✅ Post User
+POST {{hostname}}/user
+Content-Type: application/json
+Accept: application/json
+# Authorization: {{token}}
+
+{
+    "name": "Test",
+    "email": "test",
+    "age": 30
+}
+
+### ✅ Show User
+GET {{hostname}}/user/3
+# Authorization: {{token}}
+
+### ✅ Update User
+PUT {{hostname}}/user/3
+Content-Type: application/json
+Accept: application/json
+# Authorization: {{token}}
+
+{
+    "name": "Test",
+    "email": "test",
+    "age": 20
+}
+
+### ✅ Delete User
+DELETE {{hostname}}/user/3/delete
+# Authorization: {{token}}
+
+### ✅ Logout
+POST {{hostname}}/logout
+# Authorization: {{token}}
+
