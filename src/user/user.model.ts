@@ -4,5 +4,5 @@ export class UserModel implements Prisma.UserCreateInput {
     id?: number;
     name: string;
     email: string;
-    age: number;
+    age: number | 0;
 }

@@ -13,11 +13,94 @@ Accept: application/json
     "password": "password"
 }
 
-### ✅ Get User
+### ✅ Logout
+POST {{hostname}}/logout
+# Authorization: {{token}}
+
+################# ✅ Category
+### ✅ Get category
+GET {{hostname}}/category
+# Authorization: {{token}}
+
+### ✅ Post category
+POST {{hostname}}/category
+Content-Type: application/json
+Accept: application/json
+# Authorization: {{token}}
+
+{
+    "name": "Test",
+    "desc": "Test",
+    "img": "Test"
+}
+
+### ✅ Show category
+GET {{hostname}}/category/3
+# Authorization: {{token}}
+
+### ✅ Update category
+PUT {{hostname}}/category/3
+Content-Type: application/json
+Accept: application/json
+# Authorization: {{token}}
+
+{
+    "name": "Test",
+    "desc": "Test",
+    "img": "Test"
+}
+
+### ✅ Delete category
+DELETE {{hostname}}/category/3/delete
+# Authorization: {{token}}
+
+################# ✅ Product
+### ✅ Get product
+GET {{hostname}}/product
+# Authorization: {{token}}
+
+### ✅ Post product
+POST {{hostname}}/product
+Content-Type: application/json
+Accept: application/json
+# Authorization: {{token}}
+
+{
+    "name": "Test",
+    "desc": "Test",
+    "img": "Test",
+    "price": 10,
+    "categoryId": 1
+}
+
+### ✅ Show product
+GET {{hostname}}/product/3
+# Authorization: {{token}}
+
+### ✅ Update product
+PUT {{hostname}}/product/3
+Content-Type: application/json
+Accept: application/json
+# Authorization: {{token}}
+
+{
+    "name": "Test",
+    "desc": "Test",
+    "img": "Test",
+    "price": 20,
+    "categoryId": 1
+}
+
+### ✅ Delete product
+DELETE {{hostname}}/product/3/delete
+# Authorization: {{token}}
+
+################# ✅ User
+### ✅ Get user
 GET {{hostname}}/user
 # Authorization: {{token}}
 
-### ✅ Post User
+### ✅ Post user
 POST {{hostname}}/user
 Content-Type: application/json
 Accept: application/json
@@ -25,15 +108,15 @@ Accept: application/json
 
 {
     "name": "Test",
-    "email": "test",
-    "age": 30
+    "email": "Test",
+    "age": 20,
 }
 
-### ✅ Show User
+### ✅ Show user
 GET {{hostname}}/user/3
 # Authorization: {{token}}
 
-### ✅ Update User
+### ✅ Update user
 PUT {{hostname}}/user/3
 Content-Type: application/json
 Accept: application/json
@@ -45,11 +128,6 @@ Accept: application/json
     "age": 20
 }
 
-### ✅ Delete User
+### ✅ Delete user
 DELETE {{hostname}}/user/3/delete
 # Authorization: {{token}}
-
-### ✅ Logout
-POST {{hostname}}/logout
-# Authorization: {{token}}
-
